@@ -18,11 +18,14 @@ public class AppConfig {
     // 메소드명이 스프링빈의 이름
     @Bean
     public MemberService memberService() {
+
+        System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
     public MemberRepository memberRepository() {
+        System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
 
