@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 public class OrderServiceImpl implements OrderService {
     // Impl 클래스가 직접 구현체를 선택하면 안된다.
     //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+    // final키워드를 붙여라 (생성자 주입 방식만 final 키워드를 사용할 수 있다.)
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
