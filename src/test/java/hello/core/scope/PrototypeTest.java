@@ -18,6 +18,7 @@ public class PrototypeTest {
         ac.close();
     }
 
+
     // 프로토타입 스코프는 필요할 때 생성되고, 그 후로는 스프링 컨테이너가 관리를 하지 않기에 종료 콜백 실행이 안된다.
     @Scope("prototype")
     static class PrototypeBean {
